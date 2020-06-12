@@ -22,7 +22,7 @@ h1, h2, h3
     font-family: 'Montserrat', sans-serif;
 }
 
-body, .navbar
+.navbar, .home-callout
 {
     background: #C6FFDD;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
@@ -32,4 +32,11 @@ body, .navbar
 .navbar
 {
     border: none;
+}
+
+.home-callout
+{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin-top: -20px;
 }
