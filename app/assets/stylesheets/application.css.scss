@@ -24,6 +24,7 @@ h1, h2, h3
     font-family: 'Montserrat', sans-serif;
 }
 
+// Navbar Styles
 .navbar, .home-callout
 {
     background: #C6FFDD;  /* fallback for old browsers */
@@ -53,6 +54,21 @@ h1, h2, h3
     }
 }
 
+.navbar-default .navbar-toggle .icon-bar 
+{
+  background-color: white;
+}
+
+.navbar-default .navbar-toggle 
+{
+  border: 2px solid white;
+  &:hover, &:focus 
+  {
+    background-color: #FFA28E;
+  }
+}
+
+// Home Page Styles
 .home-callout
 {
     padding-top: 50px;
