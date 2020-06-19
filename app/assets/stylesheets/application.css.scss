@@ -24,8 +24,7 @@ h1, h2, h3
     font-family: 'Montserrat', sans-serif;
 }
 
-// Navbar Styles
-.navbar, .home-callout
+.navbar, .home-callout // Navbar Styles
 {
     background: #C6FFDD;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
@@ -68,29 +67,30 @@ h1, h2, h3
   }
 }
 
-// Home Page Styles
-.home-callout
+.home-callout // Home Page Styles
 {
     padding-top: 50px;
     padding-bottom: 100px;
     margin-top: -20px;
 }
 
-// Contact Page Styles
-.form-control
+.form-control // Contact Page Styles
 {
     margin-bottom: 10px;
 }
 
-// For Sign-Up and Log-In
-.well h2
+.well h2 // For Sign-Up and Log-In
 {
     margin-top: 0px;
     margin-bottom: 20px;
 }
 
-// For Contact Me
-.container h3
+.alert-notice // Devise 'signed out succesfully' etc
+{
+    display: none;
+}
+
+.container h3 // For Contact Me
 {
     margin-top: 10px;
     margin-bottom: 20px;
