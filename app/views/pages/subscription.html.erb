@@ -2,20 +2,20 @@
     <h1>Sample Software Subscription/Membership</h1>
     <h4>This is a tech demo - it has full functionality but doesn't grant access to any software</h4>
 </div>
-<div class="container home-signup-links">
+<div class="container subscription-links">
   <div class="row">
     <div class="col-md-6">
       <div class="well">
         <h2 class="text-center">Basic Subscription</h2>
-        <h4>Sign up for free and get basic access to the software.</h4>
-        <%= link_to "Sign up with Basic", "#", class: 'btn btn-primary btn-lg btn-block' %>
+        <h4 class="text-center">Sign up for free and get basic access to the software.</h4>
+        <%= link_to "Sign up with Basic", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
       </div>
     </div>
     <div class="col-md-6">
       <div class="well">
         <h2 class="text-center">Pro Subscription</h2>
-        <h4>Sign up for the pro account for $5/month and get full access to the software.</h4>
-        <%= link_to "Sign up with Pro", "#", class: 'btn btn-success btn-lg btn-block' %>
+        <h4 class="text-center">Sign up for $5 per month and get full access to the software.</h4>
+        <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
       </div>
     </div>
   </div>
