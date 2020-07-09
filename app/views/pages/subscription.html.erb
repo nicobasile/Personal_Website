@@ -9,7 +9,7 @@
         <div class="well">
           <h2 class="text-center">Your Profile</h2>
           <% if current_user.profile %>
-            <%= link_to "Edit Your Profile", '#', class: 'btn btn-default btn-lg btn-block' %>
+            <%= link_to "Edit Your Profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
             <%= link_to "View Your Profile", user_path(id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
           <% else %>
             <p class="text-center">Make a profile so that others can see your information</p>
@@ -21,7 +21,7 @@
         <div class="well">
           <h2 class="text-center">The Community</h2>
           <p class="text-center">Look at who else has created accounts!</p>
-          <%= link_to "View the Community", '#', class: 'btn btn-default btn-lg btn-block' %>
+          <%= link_to "View the Community", users_path, class: 'btn btn-default btn-lg btn-block' %>
         </div>
       </div>
     <% else %>
