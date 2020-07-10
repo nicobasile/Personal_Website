@@ -1,6 +1,9 @@
 <div class="container text-center">
-    <h1>Sample Software Subscription/Membership</h1>
-    <h4>This is a tech demo - it has full functionality but doesn't grant access to any software</h4>
+    <h1>Community Profiles</h1>
+    <h4>This is a tech demo with full functionality and security.</h4>
+    <% if !user_signed_in? %>
+      <h4>Pro accounts WILL NOT and CANNOT charge any credit card. Currently, pro accounts grant no additional access to any content.</h4>
+    <% end %>
 </div>
 <div class="container subscription-links">
   <div class="row">
@@ -9,7 +12,8 @@
         <div class="well">
           <h2 class="text-center">Your Profile</h2>
           <% if current_user.profile %>
-            <%= link_to "Edit Your Profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+            <%= link_to "Edit Your Public Profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+            <%= link_to "Change Your Password/Email", edit_user_registration_path, class: 'btn btn-default btn-lg btn-block' %>
             <%= link_to "View Your Profile", user_path(id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
           <% else %>
             <p class="text-center">Make a profile so that others can see your information</p>
