@@ -85,6 +85,12 @@ h1, h2, h3, h4
     margin-bottom: 20px;
 }
 
+.well h5 // For Community Page
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 .alert-notice // Devise 'signed out succesfully' etc
 {
     display: none;
