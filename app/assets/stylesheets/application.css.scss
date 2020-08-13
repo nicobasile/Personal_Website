@@ -19,65 +19,85 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
-h1, h2, h3, h4
+// Everywhere
+html, body 
+{
+    height: 100%;
+    background-color: #fff; 
+    //display: -ms-flexbox;
+    //display: -webkit-box;
+    //display: flex;
+    //-ms-flex-pack: center;
+    //-webkit-box-pack: center;
+    //justify-content: center;
+    //color: #fff;
+    //text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+
+}
+
+h1, h2, h3, h4, h5, p
 {
     font-family: 'Montserrat', sans-serif;
 }
 
-.navbar // Navbar Styles
+// Navbar
+.navbar 
 {
-    background: #C6FFDD;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    height: 100px;
+    align-items: center;
+    display: flex;
 }
 
 .navbar
 {
-    border: none;
-}
-
-.navbar-brand
-{
-    font-weight: 500;
-}
-
-.navbar-default .navbar-brand,
-.navbar-default .navbar-nav > li > a
-{
     font-family: 'Montserrat', sans-serif;
-    color: black;
-    &:hover
-    {
+    margin-bottom: 0px;
+    .navbar-brand {
         color: black;
-        opacity: .75;
+        font-size: 28px;
+        font-weight: 500;
+        &:hover, &:focus {
+            color: inherit;
+            border-bottom: 0;
+            opacity: 75%;
+        }
+    }
+    a {
+        color: black;
+        font-size: 20px;
+        border-bottom: .25rem solid transparent;
+        &:hover, &:focus {
+            color: green;
+            border-bottom-color: green;
+            opacity: 50%;
+        }
     }
 }
 
-.navbar-default .navbar-toggle .icon-bar 
+.nav li a:hover { background-color: transparent; }
+
+.active a
 {
-  background-color: white;
+    color: green;
+    border-bottom-color: green;
 }
 
-.navbar-default .navbar-toggle 
-{
-  border: 2px solid white;
-  &:hover, &:focus 
-  {
-    background-color: #FFA28E;
-  }
-}
+.fa { margin-right: 5px; }
 
-.home-callout // Home Page Styles
+// Home Page
+.home-callout
 {
     padding-top: 50px;
     padding-bottom: 100px;
     margin-top: -20px;
 }
 
-.form-control // Contact Page Styles
-{
-    margin-bottom: 10px;
-}
+// Contact Page
+.form-control { margin-bottom: 10px; }
+
+#contact_comments { height: 15rem; }
 
 .well h2 // For Sign-Up and Log-In
 {
@@ -85,7 +105,8 @@ h1, h2, h3, h4
     margin-bottom: 20px;
 }
 
-.well h5 // For Community Page
+// Community Page
+.well h5
 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -96,13 +117,15 @@ h1, h2, h3, h4
     display: none;
 }
 
-.container h3 // For Contact Me
+// Contact Me Page
+.container h3 
 {
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
-.subscription-links // For subscription
+// Subcription Page
+.subscription-links 
 {
     margin-top: 30px;
 }
@@ -119,4 +142,34 @@ h1, h2, h3, h4
   background: rgba(255, 255, 255, 0.5);
   border-color: rgba(255, 255, 255, 0.7);
   margin-top: -14px;
+}
+
+// Project Page
+.project-images
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+}
+
+.row > .well
+{
+    margin: 10px;
+}
+
+
+// About Page
+.about-image
+{
+    width: 270px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+#footer {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
