@@ -27,29 +27,19 @@
           <% end %>
         </div>
         <div class="collapse navbar-collapse" id="main-nav-collapse">
-          <!-- <div class="nav navbar-nav navbar-right">
-            <% if user_signed_in? %>
-              <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: 'btn btn-default navbar-btn' %>
-            <% else %>
-              <%= link_to "Log In", new_user_session_path, class: 'btn btn-default navbar-btn' %>
-              <%= link_to "Sign Up", subscription_path, class: 'btn btn-default navbar-btn' %>
-            <% end %>
-          </div> -->
           <%= nav_bar do %>
             <%= nav_link 'Home', root_path %>
             <%= nav_link 'Projects', projects_path %>
             <%= nav_link 'About', about_path %>
             <%= nav_link 'Contact Me', new_contact_path %>
-          <% end %>
-          <!--<ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
-              <li><%= link_to "Community", subscription_path %></li>
+              <%= nav_link 'Community', community_path %>
+              <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: 'btn btn-outline-success btn-log' %>
+            <% else %>
+              <%= link_to "Log In", new_user_session_path, class: 'btn btn-outline-success btn-log' %>
+              <%= link_to "Sign Up", community_path, class: 'btn btn-outline-success' %>
             <% end %>
-            <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "Projects", projects_path %></li>
-            <li><%= link_to "About", about_path %></li>
-            <li><%= link_to "Contact Me", new_contact_path %></li>
-          </ul>-->
+          <% end %>
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
@@ -60,7 +50,7 @@
       <% end %>
     </div>
     
-    <%= yield %> <!-- Pulled from views/pages -->
+    <%= yield %> <!-- Pulls from /views/ -->
  
   </body>
 </html>

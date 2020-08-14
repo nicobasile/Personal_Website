@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     def about
     end
     
-    def subscription
+    def community
         @basic_plan = Plan.find(1)
         @pro_plan = Plan.find(2)
     end

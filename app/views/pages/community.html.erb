@@ -1,14 +1,18 @@
-<div class="container text-center">
+<div class="container text-center col-md-8 col-md-offset-2">
     <h1>Community Profiles</h1>
     <h4>This is a tech demo with full functionality and security.</h4>
+    <h4>This project primarily served as a learning experience for 
+    <br>SQL databases, ecommerce with Stripe, and general web development with Ruby on Rails.</h4>
     <% if !user_signed_in? %>
-      <h4>Pro accounts WILL NOT and CANNOT charge any credit card. Currently, pro accounts grant no additional access to any content.</h4>
+      <h4>Pro accounts WORK, but WILL NOT charge any credit card. Currently, pro accounts grant no additional access to any content other than a profile badge.</h4>
+      <h4>If you would like to test the pro account, you must use Stripe's testing credit card, which is 4111-1111-1111-1111, any random CVV, and any expiration date.</h4>
     <% end %>
+    <br>
 </div>
 <div class="container subscription-links">
   <div class="row">
     <% if user_signed_in? %>
-      <div class="col-md-6">
+      <div class="col-md-5 col-md-offset-1">
         <div class="well">
           <h2 class="text-center">Your Profile</h2>
           <% if current_user.profile %>
@@ -21,25 +25,27 @@
           <% end %>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-5">
         <div class="well">
           <h2 class="text-center">The Community</h2>
-          <h5 class="text-center">Look at who else have created accounts!</h5></br>
+          <h4 class="text-center">See who else created an account!</h4></br>
           <%= link_to "View the Community", users_path, class: 'btn btn-default btn-lg btn-block' %>
         </div>
       </div>
     <% else %>
       <div class="col-md-6">
         <div class="well">
-          <h2 class="text-center">Basic Subscription</h2>
-          <h4 class="text-center">Sign up for free and get basic access to the software.</h4>
+          <h2 class="text-center">Basic Account</h2>
+          <h4 class="text-center">Sign up for free and get basic access to the community.</h4>
+          <h4 class="text-center">(Because this is a tech demo, basic accounts actually give full access to everything)</h4><br>
           <%= link_to "Sign up with Basic", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
         </div>
       </div>
       <div class="col-md-6">
         <div class="well">
-          <h2 class="text-center">Pro Subscription</h2>
-          <h4 class="text-center">Sign up for $5 per month and get full access to the software.</h4>
+          <h2 class="text-center">Pro Account</h2>
+          <h4 class="text-center">Sign up for $5 per month and get a <span class="label label-danger">PRO</span> badge.</h4>
+          <h4 class="text-center">(I have disabled this charging real credit cards, so for now you must use Stripe's testing credit card above)</h4><br>
           <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
         </div>
       </div>

@@ -20,10 +20,12 @@
 @import 'font-awesome';
 
 // Everywhere
-html, body 
+html, body
 {
     height: 100%;
     background-color: #fff; 
+    background-size: cover;
+    background-attachment: fixed;
     //display: -ms-flexbox;
     //display: -webkit-box;
     //display: flex;
@@ -33,12 +35,23 @@ html, body
     //color: #fff;
     //text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
     box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-
+    
 }
 
 h1, h2, h3, h4, h5, p
 {
     font-family: 'Montserrat', sans-serif;
+}
+
+h1 { margin-top: 10px; } // For page titles
+
+.card-body .btn
+{
+    color: white;
+    background-color: #02a802;
+    border-color: #02a802;
+    font-family: 'Montserrat', sans-serif;
+    &:hover, &:focus { background-color: green; }
 }
 
 // Navbar
@@ -69,9 +82,9 @@ h1, h2, h3, h4, h5, p
         font-size: 20px;
         border-bottom: .25rem solid transparent;
         &:hover, &:focus {
-            color: green;
-            border-bottom-color: green;
-            opacity: 50%;
+            color: #02a802;
+            border-bottom-color: #02a802;
+            opacity: 75%;
         }
     }
 }
@@ -80,11 +93,23 @@ h1, h2, h3, h4, h5, p
 
 .active a
 {
-    color: green;
-    border-bottom-color: green;
+    color: #02a802;
+    border-bottom-color: #02a802;
 }
 
-.fa { margin-right: 5px; }
+.fa-superpowers { color: #02a802; }
+
+.navbar-nav .btn
+{
+    margin-top: 4px;
+    color: #02a802;
+    background-color: transparent;
+    border-color: #02a802;
+    border: 1px solid;
+    &:hover, &:focus { background-color: #e6f2e6; }
+}
+
+.btn-log { margin-left: 5px; margin-right: 5px; }
 
 // Home Page
 .home-callout
@@ -117,6 +142,13 @@ h1, h2, h3, h4, h5, p
     display: none;
 }
 
+.avatar-show-img
+{
+    width: 256px;
+    height: 256px;
+    border-radius: 25px;
+}
+
 // Contact Me Page
 .container h3 
 {
@@ -138,25 +170,25 @@ h1, h2, h3, h4, h5, p
 
 .alert-notice, .alert-alert // Alert Messages ex. "You are already signed in"
 { 
-  text-align: center;
-  background: rgba(255, 255, 255, 0.5);
-  border-color: rgba(255, 255, 255, 0.7);
-  margin-top: -14px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.7);
+    margin-top: -14px;
 }
 
 // Project Page
 .project-images
 {
-    width: 100px;
-    height: 100px;
+    width: 128px;
+    height: 128px;
     border-radius: 25px;
+    margin-bottom: 15px;
 }
 
 .row > .well
 {
     margin: 10px;
 }
-
 
 // About Page
 .about-image
@@ -167,9 +199,9 @@ h1, h2, h3, h4, h5, p
 }
 
 #footer {
-  width: 100%;
-  height: 100px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }

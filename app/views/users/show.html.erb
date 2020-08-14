@@ -1,10 +1,19 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3 text-center">
+    <div class="col-md-2 text-right" style="margin-top: 12px;">
+      <a href="/users" class="btn btn-primary"><i class='fa fa-arrow-left'></i> View Users</a>
+    </div>
+    <div class="col-md-10 text-left">
+      <h1>User Profile</h1><br>
+    </div>
+    
+  </div>
+  <div class="row">
+    <div class="col-md-4 text-center">
       <%= image_tag @user.profile.avatar.url, class: 'avatar-show-img' %>
     </div>
     <div class="col-md-6">
-      <h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
+      <h2><%= @user.profile.first_name %> <%= @user.profile.last_name %></h2>
       <h3><span class="job-title-icon"><%= job_title_icon %></span><%= @user.profile.profession %></h3>
       <div class="well profile-block profile-description">
         <h3>Description</h3>
@@ -18,6 +27,7 @@
         </div>
       <% #end %>
     </div>
+    <div class="col-md-2"></div>
   </div>
 
 </div>

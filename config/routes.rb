@@ -5,8 +5,10 @@ Rails.application.routes.draw do
         resource :profile
     end
     get 'about', to: 'pages#about'
-    get 'subscription', to: 'pages#subscription'
+    get 'community', to: 'pages#community'
     get 'projects', to: 'pages#projects'
+    get 'projects/KitchenSync', to: 'projects#KitchenSync'
+
     resources :contacts, only: :create
     get 'contact-me', to: 'contacts#new', as: 'new_contact'
 end
