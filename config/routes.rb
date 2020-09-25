@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get 'community', to: 'pages#community'
     get 'projects', to: 'pages#projects'
     get 'projects/KitchenSync', to: 'projects#KitchenSync'
+    get 'projects/ZealotStrike', to: 'projects#ZealotStrike'
 
     resources :contacts, only: :create
     get 'contact-me', to: 'contacts#new', as: 'new_contact'

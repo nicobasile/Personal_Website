@@ -185,6 +185,25 @@ h1 { margin-top: 10px; } // For page titles
     margin-bottom: 15px;
 }
 
+// Project Page
+.showcase-images
+{
+    width: 315px;
+    height: 157.5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+}
+
+.v-showcase-images
+{
+    height: 315px;
+    width: 157.5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+}
+
 .row > .well
 {
     margin: 10px;
