@@ -1,3 +1,5 @@
-# README
+My personal website is where I centralize all my projects!
 
-[Upskill](http://upskillcourses.com) Software-As-A-Service Ruby on Rails App
+Check it out: http://www.nicobasile.com/
+
+I will be updating this readme and adding more info later.
